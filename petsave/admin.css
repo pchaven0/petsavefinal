@@ -1,0 +1,367 @@
+/* General dashboard styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+.dashboard-container {
+    width: 80%;
+    margin: 20px auto;
+}
+
+.dashboard-header {
+    background-color: #333;
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+
+.dashboard-header h1 {
+    margin: 0;
+}
+
+.dashboard-header .btn-logout {
+    color: white;
+    background-color: #f44336;
+    padding: 10px;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.dashboard-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.dashboard-nav li {
+    margin-right: 15px;
+}
+
+.dashboard-nav a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+.dashboard-nav a:hover {
+    color: #f44336;
+}
+
+/* Alert Box Style */
+.alert {
+    background-color: #f44336;
+    color: white;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+/* Adoption Applications Grid */
+.application-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* Create 3 columns for each item */
+    gap: 15px; /* Space between columns */
+    margin-top: 20px;
+    overflow-x: auto; /* Makes it horizontally scrollable if the content overflows */
+    width: 100%; /* Ensure it takes up full width of the parent container */
+    max-width: 100%; /* Ensure it is responsive */
+}
+
+.grid-body {
+    display: contents; /* Makes each grid item align with the grid layout */
+}
+
+.grid-body .grid-item {
+    background-color: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Adding shadow to grid items */
+    border-radius: 5px;
+    padding: 10px;
+    text-align: center;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Column-specific styles */
+.grid-body .grid-item:nth-child(odd) {
+    background-color: #f9f9f9; /* Alternate background color for readability */
+}
+
+/* Image styles inside the grid */
+.grid-item img {
+    max-width: 100px;
+    max-height: 100px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+/* Action Buttons */
+.btn-approve, .btn-cancel {
+    padding: 6px 12px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+.btn-approve {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+}
+
+.btn-approve:hover {
+    background-color: #45a049;
+}
+
+.btn-cancel {
+    background-color: #f44336;
+    color: white;
+    border: none;
+}
+
+.btn-cancel:hover {
+    background-color: #d32f2f;
+}
+
+/* Pagination styles */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.page-info {
+    font-size: 14px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1024px) {
+    .application-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2 columns on medium screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .application-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+
+@media (max-width: 768px) {
+    .application-grid {
+        grid-template-columns: 1fr; /* 1 column on small screens */
+    }
+}
+
+/* Modal styles */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed;
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 10px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7); /* Black background with opacity */
+    
+    /* Flexbox for centering the modal content */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal content (the image) */
+.modal-content {
+    max-width: 90%;
+    max-height: 80%;
+    display: block;
+    margin: auto; /* Center the image horizontally */
+    object-fit: contain; /* Ensure the image maintains its aspect ratio */
+}
+
+/* Caption under the image */
+#caption {
+    text-align: center;
+    color: white;
+    padding: 10px;
+    font-size: 18px;
+}
+
+/* Close button */
+.close {
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    color: white;
+    font-size: 36px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: #f1f1f1;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+/* User Accounts Section */
+.user-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.user-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h3 {
+    margin-top: 0;
+    font-size: 18px;
+}
+
+.user-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.user-card .btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.user-card .btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Pet Listings Section */
+.pet-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Responsive grid */
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.pet-card {
+    background-color: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.pet-card h3 {
+    font-size: 18px;
+    margin: 10px 0;
+}
+
+.pet-card p {
+    font-size: 14px;
+    color: #666;
+}
+
+.pet-card img {
+    width: 200px; /* Fixed width */
+    height: 200px; /* Fixed height */
+    object-fit: cover; /* Ensures the image covers the box without distortion */
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.pet-card .btn-delete {
+    background-color: #f44336;
+    color: white;
+    padding: 8px 12px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.pet-card .btn-delete:hover {
+    background-color: #d32f2f;
+}
+
+/* Pagination Styles for Pet Listings */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.page-btn {
+    padding: 10px;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 0 5px;
+}
+
+.page-info {
+    font-size: 14px;
+}
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .pet-grid {
+        grid-template-columns: 1fr; /* Single column on smaller screens */
+    }
+}
+
+
+/* Media Queries for Responsive Design */
+@media (max-width: 768px) {
+    .dashboard-container {
+        width: 90%;
+    }
+
+    .dashboard-nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .dashboard-nav li {
+        margin-bottom: 10px;
+    }
+
+    .user-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .pet-grid {
+        grid-template-columns: 1fr;
+    }
+}

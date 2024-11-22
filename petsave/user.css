@@ -1,0 +1,155 @@
+/* For Navbar */
+nav {
+   background-color: #333;
+   padding: 1rem;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   position: relative;
+ }
+ 
+ .logo {
+   color: white;
+ }
+ 
+ .text-primary {
+   color: lime; 
+ }
+ 
+ /* Navigation Links */
+ nav ul {
+   list-style: none;
+   display: flex;
+   align-items: center;
+   margin-left: auto;
+ }
+ 
+ nav ul li {
+   margin: 0 1rem;
+ }
+ 
+ nav ul li a {
+   color: #fff;
+   text-decoration: none;
+   font-size: 18px;
+   padding: 0.5rem;
+   transition: color 0.3s;
+ }
+ 
+ nav ul li a:hover {
+   color: #ddd;
+ }
+ 
+ /* Hamburger Menu Styling */
+ .hamburger {
+   display: none;
+   flex-direction: column;
+   cursor: pointer;
+ }
+ 
+ .hamburger span {
+   width: 25px;
+   height: 3px;
+   background: #fff;
+   margin: 4px 0;
+   transition: all 0.3s;
+ }
+ 
+ /* Responsive Styles */
+ @media (max-width: 768px) {
+   nav ul {
+     display: none;
+     position: absolute;
+     top: 60px;
+     left: 0;
+     width: 100%;
+     background-color: #333;
+     flex-direction: column;
+     text-align: center;
+   }
+ 
+   nav ul li {
+     margin: 1rem 0;
+   }
+ 
+   .hamburger {
+     display: flex;
+   }
+ 
+   /* Display menu when active */
+   nav.active ul {
+     display: flex;
+   }
+ }
+ 
+/* Form Container Styles */
+.form-container {
+   max-width: 400px;
+   margin: 50px auto;
+   padding: 20px;
+   background-color: #fff;
+   border-radius: 8px;
+   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Form Heading Styles */
+.form-container h3 {
+   text-align: center;
+   color: #333;
+   margin-bottom: 20px;
+}
+
+/* Input Fields Styles */
+.form-container input[type="text"],
+.form-container input[type="email"],
+.form-container input[type="password"],
+.form-container select {
+   width: 100%;
+   padding: 12px;
+   margin: 10px 0;
+   border: 1px solid #ccc;
+   border-radius: 4px;
+   transition: border-color 0.3s;
+}
+
+.form-container input:focus,
+.form-container select:focus {
+   border-color: #007bff; /* Highlight border on focus */
+}
+
+/* Button Styles */
+.form-container .form-btn {
+   background-color: #007bff;
+   color: white;
+   border: none;
+   padding: 12px;
+   cursor: pointer;
+   border-radius: 4px;
+   width: 100%;
+   transition: background-color 0.3s;
+}
+
+.form-container .form-btn:hover {
+   background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Error Message Styles */
+.error-msg {
+   color: #ff0000; /* Red color for errors */
+   margin: 10px 0;
+   text-align: center;
+}
+
+/* Link Styles */
+.form-container p {
+   text-align: center;
+}
+
+.form-container a {
+   color: #007bff;
+   text-decoration: none;
+}
+
+.form-container a:hover {
+   text-decoration: underline;
+}
